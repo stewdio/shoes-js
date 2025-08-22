@@ -1,0 +1,20 @@
+{
+  "name": "shoes-js",
+  "version": "1.0.0",
+  "description": "Walking never felt so comfy.",
+  "homepage": "https://github.com/stewdio/shoes#readme",
+  "bugs": {
+    "url": "https://github.com/stewdio/shoes/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stewdio/shoes.git"
+  },
+  "license": "MIT",
+  "author": "Stewart Smith",
+  "type": "module",
+  "main": "shoes.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
