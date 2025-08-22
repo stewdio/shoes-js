@@ -2,13 +2,13 @@
   "name": "shoes-js",
   "version": "1.0.0",
   "description": "Walking never felt so comfy.",
-  "homepage": "https://github.com/stewdio/shoes#readme",
+  "homepage": "https://github.com/stewdio/shoes-js#readme",
   "bugs": {
-    "url": "https://github.com/stewdio/shoes/issues"
+    "url": "https://github.com/stewdio/shoes-js/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stewdio/shoes.git"
+    "url": "git+https://github.com/stewdio/shoes-js.git"
   },
   "license": "MIT",
   "author": "Stewart Smith",
