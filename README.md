@@ -46,8 +46,7 @@ The world can be a stabby, insane place. Put on your shoes, and keep your sanity
 ###  Booleans
 
 <code><strong>isUsefulBoolean</strong>( b )</code>. 
-Not `null` or `undefined` or `NaN` or anything else. Strictly `true` or `false`. Note that `instance of Boolean` and `typeof b === 'boolean'` would _not_ do the trick here. (See the [code comments](https://github.com/stewdio/shoes-js/blob/main/shoes.js#L84-L104) for details.) This is the simplest sanity check and already JavaScript has gotchas. 
-
+Not `null` or `undefined` or `NaN` or anything else. Strictly `true` or `false`. Note that `instance of Boolean` and `typeof b === 'boolean'` would _not_ do the trick here. (See the [code comments](https://github.com/stewdio/shoes-js/blob/main/shoes.js#L84-L104) for details.) This is the simplest sanity check and already JavaScript has gotchas.  
 <code><strong>isNotUsefulBoolean</strong>( b )</code>.
 Inverts the above logic.
 
@@ -56,13 +55,10 @@ Inverts the above logic.
 
 ###  Numbers
 
-<code><strong>isUsefulNumber</strong>( n )</code>.  Returns true if `n` is a numeric, finite number. It’s just a [hair trickier](https://github.com/stewdio/shoes-js/blob/main/shoes.js#L84-L104) than you’d expect. But we’ve got you covered.
-
+<code><strong>isUsefulNumber</strong>( n )</code>.  Returns true if `n` is a numeric, finite number. It’s just a [hair trickier](https://github.com/stewdio/shoes-js/blob/main/shoes.js#L84-L104) than you’d expect. But we’ve got you covered.  
 <code><strong>isNotUsefulNumber</strong>( n )</code>. Inverts the above logic.  
-
 <code><strong>isUsefulInteger</strong>( n )</code>. 
-Adds integer-checking to `isUsefulNumber`.
-
+Adds integer-checking to `isUsefulNumber`.  
 <code><strong>isNotUsefulInteger</strong>( n )</code>. 
 Inverts the above logic.  
 
@@ -72,17 +68,13 @@ Inverts the above logic.
 ###  Strings
 
 <code><strong>isString</strong>( s )</code>. 
-Is it? (Does _not_ include [Template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals).) 
-
+Is it? (Does _not_ include [Template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals).)  
 <code><strong>isEmptyString</strong>( s )</code>.
 Is it a `String` with a `length` of exactly zero?  
-
 <code><strong>isNonEmptyString</strong>( s )</code>.
 Looking for `isString` and a `length` greater than zero.  
-
 <code><strong>isUsefulString</strong>( s )</code>. 
-Currently this is pegged to `isNonEmptyString`, though I could see arguments for otherwise.
-
+Currently this is pegged to `isNonEmptyString`, though I could see arguments for otherwise.  
 <code><strong>isNotUsefulString</strong>( s )</code>. 
 Inverts the above logic.  
 
@@ -96,7 +88,6 @@ Inverts the above logic.
 <code><strong>isEmptyArray</strong>( a )</code>.  
 <code><strong>isNotEmptyArray</strong>( a )</code>.  
 <code><strong>isUsefulArray</strong>( a )</code>.  
-
 __`arrayCount`__. What’s the difference between your grandma’s `Array.prototype.length` and `arrayCount`?  We only count the _defined_ entries—very useful for determining how many elements are actually in a [sparse Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_collections). 
 
 
