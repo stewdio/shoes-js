@@ -236,7 +236,7 @@ function arrayCount( a ){
 //////////////////
 
 
-function constrain( n, min, max ){
+function clamp( n, min, max ){
 
 	if( isNotUsefulNumber( max )){
 	
@@ -266,7 +266,7 @@ function normalize( n, minOrRange, max ){
 }
 function normalize01( n, minOrRange, max ){
 
-	return constrain( normalize( n, minOrRange, max ), 0, 1 )
+	return clamp( normalize( n, minOrRange, max ), 0, 1 )
 }
 function lerp( n, minOrRange, max ){
 
@@ -392,7 +392,7 @@ EXPAND in 80.. 90 ->  45..100
 SHRINK in 90..170 -> 100..130
 etc
 
-** the remapping needs to be constrained! 
+** the remapping needs to be clamped! 
 ** if the value is outside of the remap instructions, just return the original value!
 
 value = n
@@ -410,7 +410,7 @@ function mapDelux( value, rules ){
 }
 
 
-//  Difference is these remappings are CONSTRAINED just to the remapping range!
+//  Difference is these remappings are CLAMPED just to the remapping range!
 function mapRanges( numberOrList, listOfMaps ){
 
 	//  Map 45˚ to 90˚ --> 50˚ to 270 ?
@@ -885,11 +885,12 @@ export {
 	isEmptyArray,
 	isNotEmptyArray,
 	isUsefulArray,
+	arrayCount,
 
 
 	//  Unitless. 
 
-	constrain,
+	clamp,
 	round,
 	normalize,
 	normalize01,
